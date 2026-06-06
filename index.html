@@ -1,1123 +1,1539 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyndMesh | AI-Powered SaaS Solutions for Enterprise</title>
-    <meta name="description" content="Build, automate, and scale with AI. Enterprise-grade SaaS solutions for EdTech, HealthTech, FashionTech, and business automation. Trusted by 500+ organizations.">
-    <meta name="keywords" content="AI SaaS, EdTech, HealthTech, FashionTech, Enterprise AI, Business Automation, India">
-    <meta name="author" content="Nagaraj Patarlapati & Shirisha Boram">
-    <meta property="og:title" content="MyndMesh - AI-Powered SaaS Solutions">
-    <meta property="og:description" content="Build, automate, and scale with AI. Enterprise-grade SaaS solutions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://myndmesh.in">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MyndMesh - AI-Powered SaaS Solutions">
-    <meta name="twitter:description" content="Build, automate, and scale with AI.">
-    <link rel="canonical" href="https://myndmesh.in">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyndMesh | AI-Powered SaaS for the Future</title>
+<meta name="description" content="Build, automate, and scale with AI. Enterprise-grade SaaS solutions for EdTech, HealthTech, FashionTech, and Enterprise Automation. Trusted by 500+ organizations.">
+<meta property="og:title" content="MyndMesh - AI-Powered SaaS Solutions">
+<meta property="og:description" content="Build, automate, and scale with AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myndmesh.in">
+<link rel="canonical" href="https://myndmesh.in">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 
-        :root {
-            --primary: #3B82F6;
-            --primary-dark: #2563EB;
-            --primary-light: #60A5FA;
-            --accent: #06D6A0;
-            --accent-dark: #05b888;
-            --dark: #0F172A;
-            --gray-900: #1E293B;
-            --gray-800: #334155;
-            --gray-700: #475569;
-            --gray-600: #64748B;
-            --gray-400: #94A3B8;
-            --gray-200: #E2E8F0;
-            --gray-100: #F1F5F9;
-            --white: #FFFFFF;
-            --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #06D6A0 100%);
-            --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --radius: 0.75rem;
-            --radius-lg: 1rem;
-        }
+:root {
+  --ink: #070B12;
+  --ink-2: #111827;
+  --surface: #0D1321;
+  --panel: #131D2E;
+  --border: rgba(255,255,255,0.08);
+  --border-glow: rgba(20,210,170,0.3);
+  --blue: #1A6FFF;
+  --blue-light: #4B93FF;
+  --teal: #14D2AA;
+  --teal-dim: rgba(20,210,170,0.12);
+  --amber: #F5A623;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.45);
+  --muted-2: rgba(255,255,255,0.22);
+  --grad-primary: linear-gradient(135deg, #1A6FFF 0%, #14D2AA 100%);
+  --grad-hero: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(26,111,255,0.18) 0%, transparent 70%);
+  --grad-card: linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--gray-900);
-            line-height: 1.5;
-            background: var(--white);
-            overflow-x: hidden;
-        }
+html { scroll-behavior: smooth; }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-        }
+body {
+  font-family: var(--font-body);
+  background: var(--ink);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
+h1,h2,h3,h4,h5 { font-family: var(--font-display); letter-spacing: -0.02em; }
 
-        ::-webkit-scrollbar-track {
-            background: var(--gray-100);
-        }
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--gray-400);
-            border-radius: 4px;
-        }
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.028;
+}
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--gray-600);
-        }
+/* ── LAYOUT ── */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 7rem 0; }
 
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
+/* ── GRADIENT TEXT ── */
+.g-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 
-        .glass-dark {
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+/* ── PILL BADGE ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(26,111,255,0.12); border: 1px solid rgba(26,111,255,0.25);
+  color: var(--blue-light); font-size: 0.75rem; font-weight: 600;
+  padding: 0.35rem 0.85rem; border-radius: 100px; letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge .dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; animation: pulse 2s infinite; }
 
-        /* Gradient Text */
-        .gradient-text {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 1.75rem; border-radius: 10px;
+  font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; border: none; text-decoration: none;
+  transition: all 0.2s var(--ease-out); position: relative; overflow: hidden;
+}
+.btn-primary {
+  background: var(--grad-primary); color: var(--white);
+  box-shadow: 0 0 30px rgba(26,111,255,0.3);
+}
+.btn-primary::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(255,255,255,0); transition: background 0.2s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(26,111,255,0.45); }
+.btn-primary:hover::after { background: rgba(255,255,255,0.08); }
 
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            border-radius: var(--radius);
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-            font-size: 0.875rem;
-            text-decoration: none;
-        }
+.btn-ghost {
+  background: transparent; border: 1px solid var(--border);
+  color: rgba(255,255,255,0.75);
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.25); color: var(--white); background: rgba(255,255,255,0.05); }
 
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: var(--white);
-        }
+.btn-teal {
+  background: var(--teal-dim); border: 1px solid rgba(20,210,170,0.25);
+  color: var(--teal);
+}
+.btn-teal:hover { background: rgba(20,210,170,0.2); }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
+/* ── CARDS ── */
+.card {
+  background: var(--grad-card);
+  border: 1px solid var(--border); border-radius: 16px; padding: 2rem;
+  backdrop-filter: blur(8px); transition: all 0.3s var(--ease-out);
+  position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(26,111,255,0.05), transparent 60%);
+  opacity: 0; transition: opacity 0.3s;
+}
+.card:hover { border-color: rgba(26,111,255,0.25); transform: translateY(-4px); }
+.card:hover::before { opacity: 1; }
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-        }
+/* ── HEADER ── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  transition: all 0.4s var(--ease-out);
+}
+#header.scrolled {
+  background: rgba(7,11,18,0.92); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2rem; max-width: 1240px; margin: 0 auto;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.6rem; text-decoration: none;
+}
+.nav-logo-mark {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--grad-primary); display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; font-weight: 800; color: white; font-family: var(--font-display);
+}
+.nav-logo-name {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.2rem;
+  background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.nav-links { display: flex; align-items: center; gap: 0.25rem; }
+.nav-links a {
+  text-decoration: none; color: var(--muted); font-size: 0.875rem; font-weight: 500;
+  padding: 0.5rem 0.85rem; border-radius: 8px; transition: all 0.2s;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+.nav-right { display: flex; align-items: center; gap: 0.75rem; }
+.nav-mobile-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.25rem; cursor: pointer; }
 
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
+/* ── HERO ── */
+#hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding-top: 6rem;
+  background: var(--grad-hero);
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(26,111,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,111,255,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 80%);
+}
+.hero-orb {
+  position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none;
+}
+.hero-orb-1 {
+  width: 500px; height: 500px; top: -100px; left: -150px;
+  background: radial-gradient(circle, rgba(26,111,255,0.2), transparent 70%);
+  animation: floatA 8s ease-in-out infinite;
+}
+.hero-orb-2 {
+  width: 400px; height: 400px; bottom: -50px; right: -100px;
+  background: radial-gradient(circle, rgba(20,210,170,0.18), transparent 70%);
+  animation: floatB 10s ease-in-out infinite;
+}
+.hero-content {
+  position: relative; z-index: 2; text-align: center;
+  max-width: 900px; padding: 2rem;
+}
+.hero-eyebrow { margin-bottom: 2rem; }
+.hero-h1 {
+  font-size: clamp(2.75rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.05;
+  margin-bottom: 1.5rem; letter-spacing: -0.03em;
+}
+.hero-sub {
+  font-size: 1.15rem; color: var(--muted); max-width: 560px;
+  margin: 0 auto 2.5rem; line-height: 1.7; font-weight: 300;
+}
+.hero-cta { display: flex; gap: 0.875rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem; }
+.hero-stats {
+  display: flex; gap: 0; justify-content: center;
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+  max-width: 640px; margin: 0 auto;
+  background: rgba(255,255,255,0.02); backdrop-filter: blur(8px);
+}
+.hero-stat {
+  flex: 1; padding: 1.25rem 1.5rem; text-align: center;
+  border-right: 1px solid var(--border);
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num { font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; background: var(--grad-primary); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
 
-        .btn-secondary {
-            background: var(--gray-100);
-            color: var(--gray-900);
-        }
+/* ── DASHBOARD PREVIEW ── */
+.dashboard-wrap {
+  position: relative; margin-top: 5rem; max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+.dashboard-frame {
+  background: var(--surface); border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+}
+.dashboard-chrome {
+  background: var(--panel); padding: 0.75rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.chrome-dot { width: 10px; height: 10px; border-radius: 50%; }
+.chrome-bar {
+  flex: 1; background: rgba(255,255,255,0.06); border-radius: 6px;
+  padding: 0.25rem 0.75rem; font-size: 0.7rem; color: var(--muted); margin: 0 0.75rem;
+}
+.dashboard-body { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.db-metric {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1rem;
+}
+.db-metric-val { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; }
+.db-metric-label { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
+.db-metric-delta { font-size: 0.7rem; color: var(--teal); margin-top: 0.35rem; }
+.db-chart-area { grid-column: 1 / -1; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
 
-        .btn-secondary:hover {
-            background: var(--gray-200);
-        }
+/* ── LOGOS TICKER ── */
+.ticker-wrap { overflow: hidden; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.ticker-track {
+  display: flex; gap: 3rem; width: max-content;
+  animation: ticker 25s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  display: flex; align-items: center; gap: 0.6rem;
+  color: var(--muted); font-size: 0.875rem; font-weight: 500; white-space: nowrap;
+  padding: 0.4rem 1rem; border-radius: 8px;
+  transition: color 0.2s;
+}
+.ticker-item:hover { color: var(--white); }
+.ticker-item i { font-size: 1rem; }
 
-        /* Cards */
-        .card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            transition: all 0.2s ease;
-            border: 1px solid var(--gray-200);
-        }
+/* ── SECTION HEADINGS ── */
+.section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+.section-h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+.section-sub { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 500px; font-weight: 300; }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
+/* ── PRODUCTS GRID ── */
+.products-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 4rem; }
+@media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } }
 
-        /* Logo Styles */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-        }
+.product-card {
+  background: var(--grad-card); border: 1px solid var(--border); border-radius: 20px;
+  padding: 2.5rem; position: relative; overflow: hidden; transition: all 0.3s var(--ease-out);
+  cursor: default;
+}
+.product-card::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit;
+  background: var(--card-accent, var(--grad-primary)); opacity: 0.04;
+  transition: opacity 0.3s;
+}
+.product-card:hover { border-color: var(--card-color, rgba(26,111,255,0.4)); transform: translateY(-6px); }
+.product-card:hover::after { opacity: 0.08; }
 
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
+.product-icon {
+  width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem; font-size: 1.4rem;
+}
+.product-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+.product-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300; }
+.product-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+  padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.72rem; font-weight: 600;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--muted);
+  transition: all 0.2s;
+}
+.tag:hover { color: var(--white); border-color: rgba(255,255,255,0.25); }
 
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+.product-card-large { grid-column: 1 / -1; display: flex; gap: 2rem; align-items: center; }
+@media (max-width: 768px) { .product-card-large { flex-direction: column; } }
+.product-card-large .product-visual {
+  flex: 0 0 45%; background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.5rem; height: 220px;
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
 
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+/* ── FEATURE GRID ── */
+.feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; }
+@media (max-width: 900px) { .feature-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .feature-grid { grid-template-columns: 1fr; } }
 
-        .logo-text-full {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+.feature-item {
+  padding: 1.75rem; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--grad-card);
+  transition: all 0.3s var(--ease-out);
+}
+.feature-item:hover { border-color: rgba(20,210,170,0.25); transform: translateY(-3px); }
+.feature-icon { width: 44px; height: 44px; border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.1rem; }
+.feature-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.feature-text { font-size: 0.85rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
 
-        /* Footer Logo */
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
+/* ── PRICING ── */
+.pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 4rem; align-items: start; }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; } }
 
-        .footer-logo-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.pricing-card {
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 2.25rem; background: var(--grad-card); position: relative; overflow: hidden;
+  transition: all 0.3s var(--ease-out);
+}
+.pricing-card.featured {
+  border-color: rgba(26,111,255,0.4); background: rgba(26,111,255,0.06);
+  box-shadow: 0 0 60px rgba(26,111,255,0.12);
+}
+.pricing-card.featured::before {
+  content: 'Most Popular'; position: absolute; top: 1.25rem; right: 1.25rem;
+  background: var(--grad-primary); color: white; font-size: 0.65rem; font-weight: 700;
+  padding: 0.25rem 0.65rem; border-radius: 100px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pricing-name { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.pricing-price { font-family: var(--font-display); font-size: 2.75rem; font-weight: 800; line-height: 1; margin-bottom: 0.35rem; }
+.pricing-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+.pricing-billing { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.75rem; }
+.pricing-divider { height: 1px; background: var(--border); margin-bottom: 1.75rem; }
+.pricing-features { list-style: none; margin-bottom: 2rem; }
+.pricing-features li {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.875rem; color: rgba(255,255,255,0.75); margin-bottom: 0.75rem; line-height: 1.4;
+}
+.pricing-features li i { color: var(--teal); font-size: 0.75rem; margin-top: 0.2rem; flex-shrink: 0; }
+.pricing-btn { width: 100%; text-align: center; }
 
-        .footer-logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+/* ── TESTIMONIALS ── */
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 4rem; }
+@media (max-width: 900px) { .testi-grid { grid-template-columns: 1fr; } }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.testi-card {
+  border: 1px solid var(--border); border-radius: 18px; padding: 2rem;
+  background: var(--grad-card); transition: all 0.3s var(--ease-out);
+  position: relative; overflow: hidden;
+}
+.testi-card::before {
+  content: '\201C'; position: absolute; top: 1rem; right: 1.5rem;
+  font-family: Georgia, serif; font-size: 5rem; color: rgba(26,111,255,0.12); line-height: 1;
+}
+.testi-card:hover { border-color: rgba(26,111,255,0.2); transform: translateY(-4px); }
+.testi-stars { display: flex; gap: 0.2rem; margin-bottom: 1rem; }
+.testi-star { color: var(--amber); font-size: 0.75rem; }
+.testi-text { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300; font-style: italic; }
+.testi-avatar { display: flex; align-items: center; gap: 0.75rem; }
+.testi-avatar-img {
+  width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; font-family: var(--font-display);
+}
+.testi-name { font-weight: 600; font-size: 0.875rem; }
+.testi-role { font-size: 0.75rem; color: var(--muted); }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+/* ── ABOUT / FOUNDERS ── */
+.founders-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; max-width: 800px; margin: 4rem auto 0; }
+@media (max-width: 640px) { .founders-grid { grid-template-columns: 1fr; } }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+.founder-card {
+  border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem;
+  background: var(--grad-card); text-align: center; transition: all 0.3s var(--ease-out);
+}
+.founder-card:hover { border-color: rgba(20,210,170,0.25); transform: translateY(-5px); }
+.founder-avatar {
+  width: 80px; height: 80px; border-radius: 20px; margin: 0 auto 1.25rem;
+  background: var(--grad-primary); display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; color: white; font-family: var(--font-display); font-weight: 800;
+}
+.founder-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.3rem; }
+.founder-role { font-size: 0.8rem; color: var(--teal); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+.founder-bio { font-size: 0.875rem; color: var(--muted); line-height: 1.6; font-weight: 300; margin-bottom: 1.25rem; }
+.founder-links { display: flex; gap: 0.75rem; justify-content: center; }
+.founder-links a {
+  width: 34px; height: 34px; border-radius: 9px;
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 0.85rem; text-decoration: none; transition: all 0.2s;
+}
+.founder-links a:hover { color: var(--white); border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.06); }
 
-        @keyframes logoGlow {
-            0%, 100% { filter: drop-shadow(0 0 2px rgba(59,130,246,0.3)); }
-            50% { filter: drop-shadow(0 0 8px rgba(6,214,160,0.5)); }
-        }
+.founder-quote {
+  margin-top: 4rem; border: 1px solid var(--border); border-left: 3px solid var(--teal);
+  border-radius: 16px; padding: 2.5rem; background: var(--grad-card);
+  position: relative; overflow: hidden;
+}
+.founder-quote-text { font-size: 1.1rem; font-style: italic; line-height: 1.75; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; font-weight: 300; }
+.founder-quote-attr { font-size: 0.85rem; color: var(--muted); }
+.founder-quote-attr strong { color: var(--white); }
 
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
+/* ── FAQ ACCORDION ── */
+.faq-list { max-width: 740px; margin: 4rem auto 0; }
+.faq-item {
+  border-bottom: 1px solid var(--border); overflow: hidden;
+  transition: all 0.3s var(--ease-out);
+}
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 0; cursor: pointer; gap: 1rem;
+}
+.faq-q-text { font-weight: 600; font-size: 0.95rem; }
+.faq-icon { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--muted); flex-shrink: 0; transition: all 0.25s; }
+.faq-item.open .faq-icon { background: var(--blue); border-color: var(--blue); color: white; transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--ease-out); }
+.faq-a-inner { padding-bottom: 1.5rem; font-size: 0.875rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .logo-animated {
-            animation: logoGlow 2s ease-in-out infinite;
-        }
+/* ── INTEGRATIONS ── */
+.integrations-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 3rem; }
+.integration-chip {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.6rem 1rem; font-size: 0.825rem; font-weight: 500;
+  color: rgba(255,255,255,0.65); transition: all 0.2s; cursor: default;
+}
+.integration-chip:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: var(--white); transform: translateY(-2px); }
+.integration-chip i { font-size: 0.9rem; }
 
-        /* Hero Gradient */
-        .hero-gradient {
-            background: radial-gradient(ellipse at 50% 50%, rgba(59,130,246,0.15) 0%, rgba(6,214,160,0.08) 100%);
-        }
+/* ── TRUST BAR ── */
+.trust-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 3rem; }
+.trust-badge {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.5rem 1rem; font-size: 0.8rem; color: var(--muted);
+}
+.trust-badge i { color: var(--teal); }
 
-        /* Chat Widget */
-        .chat-widget {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            z-index: 1000;
-        }
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, rgba(26,111,255,0.15), rgba(20,210,170,0.08));
+  border: 1px solid rgba(26,111,255,0.2); border-radius: 24px; padding: 5rem 4rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ''; position: absolute; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(26,111,255,0.12), transparent 60%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+}
 
-        .chat-button {
-            width: 56px;
-            height: 56px;
-            border-radius: 28px;
-            background: var(--gradient-primary);
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-xl);
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* ── FOOTER ── */
+footer {
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 5rem 0 2.5rem;
+}
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; }
+@media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer-inner { grid-template-columns: 1fr; } }
 
-        .chat-button:hover {
-            transform: scale(1.1);
-        }
+.footer-brand-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin: 1rem 0 1.5rem; font-weight: 300; }
+.footer-social { display: flex; gap: 0.6rem; }
+.footer-social a {
+  width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 0.8rem; text-decoration: none; transition: all 0.2s;
+}
+.footer-social a:hover { color: var(--white); border-color: rgba(255,255,255,0.25); }
+.footer-col h5 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); margin-bottom: 1.25rem; }
+.footer-col a { display: block; font-size: 0.85rem; color: var(--muted); text-decoration: none; margin-bottom: 0.65rem; transition: color 0.2s; font-weight: 300; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; }
+.footer-bottom p { font-size: 0.8rem; color: var(--muted); }
 
-        .chat-window {
-            position: absolute;
-            bottom: 72px;
-            right: 0;
-            width: 380px;
-            height: 560px;
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            border: 1px solid var(--gray-200);
-        }
+/* ── CHAT WIDGET ── */
+.chat-fab {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 900;
+  width: 58px; height: 58px; border-radius: 18px;
+  background: var(--grad-primary); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 32px rgba(26,111,255,0.4); transition: all 0.25s var(--ease-spring);
+  color: white; font-size: 1.35rem;
+}
+.chat-fab:hover { transform: scale(1.08) translateY(-2px); }
+.chat-fab .chat-unread {
+  position: absolute; top: -4px; right: -4px;
+  width: 18px; height: 18px; background: var(--teal); border-radius: 50%;
+  border: 2px solid var(--ink); font-size: 0.6rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.chat-panel {
+  position: fixed; bottom: 6rem; right: 2rem; z-index: 900;
+  width: 380px; height: 560px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 20px;
+  display: flex; flex-direction: column; overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+  transform: scale(0.9) translateY(20px); transform-origin: bottom right;
+  opacity: 0; pointer-events: none;
+  transition: all 0.3s var(--ease-spring);
+}
+.chat-panel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+.chat-panel-head {
+  background: linear-gradient(135deg, #1A6FFF, #14D2AA);
+  padding: 1.25rem 1.25rem 1rem;
+}
+.chat-panel-head-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.chat-agent { display: flex; align-items: center; gap: 0.75rem; }
+.chat-agent-avatar {
+  width: 38px; height: 38px; background: rgba(255,255,255,0.2); border-radius: 11px;
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.chat-agent-name { font-weight: 700; font-size: 0.9rem; }
+.chat-agent-status { font-size: 0.72rem; opacity: 0.85; display: flex; align-items: center; gap: 0.35rem; }
+.chat-agent-status::before { content: ''; width: 6px; height: 6px; background: #7FFF9E; border-radius: 50%; display: inline-block; }
+.chat-close-btn { background: rgba(255,255,255,0.15); border: none; color: white; width: 28px; height: 28px; border-radius: 8px; cursor: pointer; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; }
+.chat-quick-actions { display: flex; gap: 0.5rem; margin-top: 0.875rem; flex-wrap: wrap; }
+.chat-quick-btn {
+  background: rgba(255,255,255,0.15); border: none; color: white; font-size: 0.7rem;
+  padding: 0.3rem 0.7rem; border-radius: 100px; cursor: pointer; font-weight: 500;
+  transition: background 0.2s;
+}
+.chat-quick-btn:hover { background: rgba(255,255,255,0.25); }
+.chat-messages { flex: 1; overflow-y: auto; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.875rem; }
+.chat-messages::-webkit-scrollbar { width: 3px; }
+.chat-msg { max-width: 82%; }
+.chat-msg-bot { align-self: flex-start; }
+.chat-msg-user { align-self: flex-end; }
+.chat-bubble {
+  padding: 0.75rem 1rem; border-radius: 14px; font-size: 0.85rem; line-height: 1.55;
+}
+.chat-bubble-bot { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: rgba(255,255,255,0.85); border-radius: 4px 14px 14px 14px; }
+.chat-bubble-user { background: var(--blue); color: white; border-radius: 14px 4px 14px 14px; }
+.chat-input-row {
+  padding: 1rem; border-top: 1px solid var(--border);
+  display: flex; gap: 0.5rem;
+}
+.chat-input {
+  flex: 1; background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.65rem 1rem; color: white; font-size: 0.85rem;
+  outline: none; font-family: var(--font-body);
+  transition: border-color 0.2s;
+}
+.chat-input::placeholder { color: var(--muted); }
+.chat-input:focus { border-color: rgba(26,111,255,0.5); }
+.chat-send {
+  width: 38px; height: 38px; background: var(--grad-primary); border: none; border-radius: 10px;
+  color: white; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.chat-send:hover { transform: scale(1.05); }
+.typing-indicator { display: flex; gap: 4px; align-items: center; padding: 0.75rem 1rem; }
+.typing-dot { width: 6px; height: 6px; background: var(--muted); border-radius: 50%; animation: typingDot 1.2s ease-in-out infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
-        .chat-window.active {
-            display: flex;
-        }
+/* ── CONTACT MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px);
+  z-index: 1000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-box {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+  padding: 2.5rem; width: 90%; max-width: 480px;
+  transform: scale(0.95); transition: transform 0.3s var(--ease-spring);
+}
+.modal-overlay.open .modal-box { transform: scale(1); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.modal-title { font-size: 1.3rem; font-weight: 700; }
+.modal-close { background: rgba(255,255,255,0.07); border: 1px solid var(--border); color: var(--muted); width: 32px; height: 32px; border-radius: 9px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.modal-close:hover { color: var(--white); }
+.modal-field {
+  width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.8rem 1rem; color: white;
+  font-family: var(--font-body); font-size: 0.875rem; outline: none;
+  transition: border-color 0.2s; margin-bottom: 1rem;
+}
+.modal-field::placeholder { color: var(--muted); }
+.modal-field:focus { border-color: rgba(26,111,255,0.5); }
+textarea.modal-field { resize: none; }
 
-        /* Hero Logo */
-        .hero-logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,214,160,0.1));
-            border-radius: 24px;
-            box-shadow: var(--shadow-xl);
-            animation: logoGlow 2s ease-in-out infinite;
-        }
+/* ── SCROLL TO TOP ── */
+#scrollTop {
+  position: fixed; bottom: 2rem; left: 2rem; z-index: 800;
+  width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border); color: var(--muted); cursor: pointer;
+  display: none; align-items: center; justify-content: center; font-size: 0.8rem;
+  transition: all 0.2s;
+}
+#scrollTop:hover { color: var(--white); background: rgba(255,255,255,0.15); }
+#scrollTop.visible { display: flex; }
 
-        .hero-logo img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
+/* ── MOBILE NAV DRAWER ── */
+.mobile-nav {
+  display: none; position: fixed; inset: 0; z-index: 950;
+  background: rgba(7,11,18,0.97); backdrop-filter: blur(20px);
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-family: var(--font-display); font-size: 1.75rem; font-weight: 700;
+  color: white; text-decoration: none; transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--teal); }
+.mobile-nav-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: rgba(255,255,255,0.08); border: 1px solid var(--border);
+  color: white; width: 40px; height: 40px; border-radius: 10px;
+  cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .chat-window {
-                width: calc(100vw - 2rem);
-                right: -1rem;
-                height: 500px;
-            }
-            
-            .logo-text {
-                font-size: 1.25rem;
-            }
-            
-            .logo-icon {
-                width: 32px;
-                height: 32px;
-            }
-            
-            .hero-logo {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .hero-logo img {
-                width: 45px;
-                height: 45px;
-            }
-        }
-    </style>
+/* ── LIVE DEMO STRIP ── */
+.demo-strip {
+  background: linear-gradient(90deg, rgba(26,111,255,0.08), rgba(20,210,170,0.06));
+  border: 1px solid rgba(26,111,255,0.15); border-radius: 12px;
+  padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem;
+  flex-wrap: wrap; margin-top: 2rem;
+}
+.demo-strip-label { font-size: 0.8rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; }
+.demo-strip-items { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.demo-metric { font-size: 0.85rem; color: var(--muted); }
+.demo-metric strong { color: var(--white); }
+.pulse-dot { display: inline-block; width: 8px; height: 8px; background: var(--teal); border-radius: 50%; animation: pulse 2s infinite; margin-right: 0.4rem; }
+
+/* ── ANIMATIONS ── */
+@keyframes floatA {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(40px,-30px) scale(1.05); }
+}
+@keyframes floatB {
+  0%,100% { transform: translate(0,0); }
+  50% { transform: translate(-30px,25px) scale(0.95); }
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+@keyframes typingDot {
+  0%,100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes revealScale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-right .btn { display: none; }
+  .nav-mobile-toggle { display: flex; }
+  .hero-stat { padding: 1rem; }
+  .hero-stat-num { font-size: 1.3rem; }
+  .dashboard-body { grid-template-columns: 1fr; }
+  .db-chart-area { grid-column: auto; }
+  .section { padding: 5rem 0; }
+  .cta-banner { padding: 3rem 1.5rem; }
+  .chat-panel { width: calc(100vw - 3rem); right: 1.5rem; }
+}
+</style>
 </head>
 <body>
 
-<!-- Header Navigation -->
-<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200);">
-    <nav style="max-width: 1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
-        <a href="#" class="logo">
-            <div class="logo-icon logo-animated">
-                <img src="Gemini_Generated_Image_oebdfyoebdfyoebd.png" alt="MyndMesh Logo">
-            </div>
-            <span class="logo-text logo-text-full">MyndMesh</span>
-        </a>
-        <div style="display: flex; gap: 2rem; align-items: center;">
-            <a href="#" style="text-decoration: none; color: var(--gray-700); font-weight: 500;">Home</a>
-            <a href="#products" style="text-decoration: none; color: var(--gray-700); font-weight: 500;">Products</a>
-            <a href="#pricing" style="text-decoration: none; color: var(--gray-700); font-weight: 500;">Pricing</a>
-            <a href="#about" style="text-decoration: none; color: var(--gray-700); font-weight: 500;">About</a>
-            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Login</a>
-            <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Start Free Trial</a>
-        </div>
-    </nav>
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()"><i class="fas fa-times"></i></button>
+  <a href="#" onclick="closeMobileNav()">Home</a>
+  <a href="#products" onclick="closeMobileNav()">Products</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#contact" class="btn btn-primary" onclick="openModal();closeMobileNav()">Contact Sales</a>
+</nav>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">M</div>
+      <span class="nav-logo-name">MyndMesh</span>
+    </a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="btn btn-ghost" style="padding:0.55rem 1.1rem;font-size:0.85rem;">Login</a>
+      <a href="#" class="btn btn-primary" style="padding:0.55rem 1.1rem;font-size:0.85rem;" onclick="openModal()"><i class="fas fa-rocket" style="font-size:0.75rem;"></i> Start Free Trial</a>
+    </div>
+    <button class="nav-mobile-toggle" onclick="openMobileNav()"><i class="fas fa-bars"></i></button>
+  </div>
 </header>
 
-<!-- Hero Section -->
-<section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 5rem;">
-    <div class="hero-gradient" style="position: absolute; inset: 0;"></div>
-    <div style="position: absolute; top: 20%; left: 10%; width: 300px; height: 300px; background: var(--primary); opacity: 0.1; border-radius: 50%; filter: blur(60px); animation: float 4s ease-in-out infinite;"></div>
-    <div style="position: absolute; bottom: 20%; right: 10%; width: 400px; height: 400px; background: var(--accent); opacity: 0.1; border-radius: 50%; filter: blur(80px); animation: float 5s ease-in-out infinite reverse;"></div>
-    
-    <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; text-align: center; position: relative; z-index: 2;">
-        <!-- Animated Logo in Hero -->
-        <div class="hero-logo">
-            <img src="Gemini_Generated_Image_oebdfyoebdfyoebd.png" alt="MyndMesh Logo">
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div style="max-width:1240px;margin:0 auto;padding:4rem 2rem;width:100%;">
+    <div class="hero-content" style="margin:0 auto;">
+      <div class="hero-eyebrow">
+        <span class="badge"><span class="dot"></span> DPIIT Recognised Startup · India</span>
+      </div>
+
+      <h1 class="hero-h1">
+        Build &amp; Scale <span class="g-text">AI-Native</span><br>Products 10× Faster
+      </h1>
+
+      <p class="hero-sub">
+        Enterprise-grade SaaS intelligence for EdTech, HealthTech, FashionTech &amp; Enterprise Automation. One platform, infinite possibilities.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary" onclick="openModal()" style="padding:0.95rem 2rem;">
+          <i class="fas fa-rocket"></i> Start Free 14-Day Trial
+        </a>
+        <a href="#products" class="btn btn-ghost" style="padding:0.95rem 2rem;">
+          <i class="fas fa-play-circle"></i> Explore Products
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="10000">10,000+</div>
+          <div class="hero-stat-label">Active Users</div>
         </div>
-        
-        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(59,130,246,0.1); padding: 0.5rem 1rem; border-radius: 100px; margin-bottom: 2rem;">
-            <i class="fas fa-chart-line" style="color: var(--primary);"></i>
-            <span style="font-size: 0.875rem; font-weight: 500;">Trusted by 500+ organizations globally</span>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="500">500+</div>
+          <div class="hero-stat-label">Organizations</div>
         </div>
-        
-        <h1 style="font-size: 4rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
-            Build, Launch & Scale
-            <span class="gradient-text">AI Products</span>
-            <br>10x Faster
-        </h1>
-        
-        <p style="font-size: 1.25rem; color: var(--gray-600); max-width: 600px; margin: 0 auto 2rem;">
-            AI-powered SaaS solutions for Education, Healthcare, Fashion, Enterprise Automation and Digital Transformation.
-        </p>
-        
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-            <a href="#" class="btn btn-primary" style="padding: 1rem 2rem;"><i class="fas fa-rocket"></i> Start Free Trial</a>
-            <a href="#" class="btn btn-outline" style="padding: 1rem 2rem;"><i class="fas fa-calendar"></i> Book Live Demo</a>
-            <a href="#" class="btn btn-secondary" style="padding: 1rem 2rem;"><i class="fas fa-chart-simple"></i> Get Free AI Audit</a>
+        <div class="hero-stat">
+          <div class="hero-stat-num">99.9%</div>
+          <div class="hero-stat-label">Uptime SLA</div>
         </div>
-        
-        <!-- Stats -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto;">
-            <div>
-                <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">10,000+</div>
-                <div style="font-size: 0.875rem; color: var(--gray-600);">Active Users</div>
-            </div>
-            <div>
-                <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">500+</div>
-                <div style="font-size: 0.875rem; color: var(--gray-600);">Organizations</div>
-            </div>
-            <div>
-                <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">99.9%</div>
-                <div style="font-size: 0.875rem; color: var(--gray-600);">Uptime</div>
-            </div>
-            <div>
-                <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">40%</div>
-                <div style="font-size: 0.875rem; color: var(--gray-600);">Productivity Gain</div>
-            </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">40%</div>
+          <div class="hero-stat-label">Productivity Gain</div>
         </div>
-        
-        <!-- Dashboard Preview -->
-        <div style="margin-top: 4rem; position: relative;">
-            <div style="background: var(--dark); border-radius: var(--radius-lg); padding: 1rem; box-shadow: var(--shadow-xl);">
-                <div style="background: var(--gray-900); border-radius: calc(var(--radius-lg) - 0.5rem); padding: 1rem;">
-                    <canvas id="dashboardChart" style="width: 100%; height: 300px;"></canvas>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <!-- DASHBOARD PREVIEW -->
+    <div class="dashboard-wrap reveal" style="margin-top:4rem;">
+      <div class="dashboard-frame">
+        <div class="dashboard-chrome">
+          <div class="chrome-dot" style="background:#FF5F57;"></div>
+          <div class="chrome-dot" style="background:#FEBC2E;"></div>
+          <div class="chrome-dot" style="background:#28C840;"></div>
+          <div class="chrome-bar">https://app.myndmesh.in/dashboard</div>
+          <i class="fas fa-lock" style="color:rgba(255,255,255,0.25);font-size:0.7rem;"></i>
+        </div>
+        <div class="dashboard-body">
+          <div class="db-metric">
+            <div class="db-metric-val g-text">5,240</div>
+            <div class="db-metric-label">Active Users Today</div>
+            <div class="db-metric-delta">↑ 12.4% vs yesterday</div>
+          </div>
+          <div class="db-metric">
+            <div class="db-metric-val" style="color:#1A6FFF;">94.8%</div>
+            <div class="db-metric-label">AI Model Accuracy</div>
+            <div class="db-metric-delta" style="color:#14D2AA;">↑ 0.6% this week</div>
+          </div>
+          <div class="db-metric">
+            <div class="db-metric-val" style="color:#F5A623;">₹2.4L</div>
+            <div class="db-metric-label">Revenue Today</div>
+            <div class="db-metric-delta" style="color:#14D2AA;">↑ 31% MoM</div>
+          </div>
+          <div class="db-chart-area">
+            <canvas id="heroChart" height="160"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-strip">
+        <span class="demo-strip-label"><span class="pulse-dot"></span>Live Metrics</span>
+        <div class="demo-strip-items">
+          <span class="demo-metric"><strong>1.2M</strong> API calls / day</span>
+          <span class="demo-metric"><strong>48ms</strong> avg response</span>
+          <span class="demo-metric"><strong>99.97%</strong> success rate</span>
+          <span class="demo-metric"><strong>ISO 27001</strong> certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Products Section -->
-<section id="products" style="padding: 6rem 2rem; background: var(--gray-100);">
-    <div style="max-width: 1280px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Intelligent SaaS Ecosystem</h2>
-            <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">Comprehensive AI solutions for every industry</p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-            <!-- EdTech AI -->
-            <div class="card">
-                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3B82F6, #06D6A0); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <i class="fas fa-graduation-cap" style="color: white; font-size: 1.5rem;"></i>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">EdTech AI Suite</h3>
-                <p style="color: var(--gray-600); margin-bottom: 1rem;">Adaptive learning, assessment generator, question bank, AI notes, competitive exam platform</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Adaptive Learning</span>
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">AI Assessment</span>
-                </div>
-            </div>
-            
-            <!-- HealthTech AI -->
-            <div class="card">
-                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06D6A0, #3B82F6); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <i class="fas fa-heartbeat" style="color: white; font-size: 1.5rem;"></i>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">HealthTech AI Suite</h3>
-                <p style="color: var(--gray-600); margin-bottom: 1rem;">Patient monitoring, telemedicine, risk detection, health analytics, medical reports AI</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Risk Detection</span>
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Telemedicine</span>
-                </div>
-            </div>
-            
-            <!-- FashionTech AI -->
-            <div class="card">
-                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #8B5CF6, #06D6A0); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <i class="fas fa-tshirt" style="color: white; font-size: 1.5rem;"></i>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">FashionTech AI Suite</h3>
-                <p style="color: var(--gray-600); margin-bottom: 1rem;">Virtual try-on, AI design generator, trend forecasting, inventory optimization</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Virtual Try-On</span>
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Trend Forecasting</span>
-                </div>
-            </div>
-            
-            <!-- Enterprise AI -->
-            <div class="card">
-                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F59E0B, #3B82F6); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                    <i class="fas fa-building" style="color: white; font-size: 1.5rem;"></i>
-                </div>
-                <h3 style="margin-bottom: 0.5rem;">Enterprise AI Suite</h3>
-                <p style="color: var(--gray-600); margin-bottom: 1rem;">Workflow automation, custom GPTs, knowledge base AI, document intelligence</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Workflow AI</span>
-                    <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem;">Custom GPTs</span>
-                </div>
-            </div>
-        </div>
+<!-- LOGOS TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item"><i class="fab fa-google"></i> Google</span>
+    <span class="ticker-item"><i class="fas fa-brain"></i> Anthropic</span>
+    <span class="ticker-item"><i class="fab fa-microsoft"></i> Microsoft</span>
+    <span class="ticker-item"><i class="fab fa-slack"></i> Slack</span>
+    <span class="ticker-item"><i class="fab fa-salesforce"></i> Salesforce</span>
+    <span class="ticker-item"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+    <span class="ticker-item"><i class="fas fa-bolt"></i> Zapier</span>
+    <span class="ticker-item"><i class="fab fa-aws"></i> AWS</span>
+    <span class="ticker-item"><i class="fab fa-github"></i> GitHub</span>
+    <span class="ticker-item"><i class="fas fa-database"></i> HubSpot</span>
+    <!-- duplicate for seamless scroll -->
+    <span class="ticker-item"><i class="fab fa-google"></i> Google</span>
+    <span class="ticker-item"><i class="fas fa-brain"></i> Anthropic</span>
+    <span class="ticker-item"><i class="fab fa-microsoft"></i> Microsoft</span>
+    <span class="ticker-item"><i class="fab fa-slack"></i> Slack</span>
+    <span class="ticker-item"><i class="fab fa-salesforce"></i> Salesforce</span>
+    <span class="ticker-item"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+    <span class="ticker-item"><i class="fas fa-bolt"></i> Zapier</span>
+    <span class="ticker-item"><i class="fab fa-aws"></i> AWS</span>
+    <span class="ticker-item"><i class="fab fa-github"></i> GitHub</span>
+    <span class="ticker-item"><i class="fas fa-database"></i> HubSpot</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Our Platform</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+        <h2 class="section-h2">Intelligent SaaS<br>for Every Industry</h2>
+        <p class="section-sub">Four purpose-built AI suites engineered for impact — from classrooms to boardrooms.</p>
+      </div>
     </div>
+
+    <div class="products-grid">
+      <!-- EdTech -->
+      <div class="product-card reveal" style="--card-color:rgba(26,111,255,0.4);--card-accent:linear-gradient(135deg,#1A6FFF,#14D2AA);">
+        <div class="product-icon" style="background:linear-gradient(135deg,rgba(26,111,255,0.2),rgba(20,210,170,0.15));color:#4B93FF;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="product-title">EdTech AI Suite</div>
+        <p class="product-desc">Adaptive learning paths, AI-generated assessments, intelligent question banks, competitive exam preparation, and real-time student analytics.</p>
+        <div class="product-tags">
+          <span class="tag">Adaptive Learning</span>
+          <span class="tag">AI Assessment</span>
+          <span class="tag">Live Proctoring</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </div>
+
+      <!-- HealthTech -->
+      <div class="product-card reveal" style="--card-color:rgba(20,210,170,0.4);--card-accent:linear-gradient(135deg,#14D2AA,#1A6FFF);">
+        <div class="product-icon" style="background:linear-gradient(135deg,rgba(20,210,170,0.2),rgba(26,111,255,0.1));color:#14D2AA;">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="product-title">HealthTech AI Suite</div>
+        <p class="product-desc">Patient monitoring dashboards, telemedicine platform, early risk detection, AI-powered medical report analysis, and HIPAA-compliant data workflows.</p>
+        <div class="product-tags">
+          <span class="tag">Risk Detection</span>
+          <span class="tag">Telemedicine</span>
+          <span class="tag">HIPAA Ready</span>
+          <span class="tag">Medical AI</span>
+        </div>
+      </div>
+
+      <!-- FashionTech -->
+      <div class="product-card reveal" style="--card-color:rgba(139,92,246,0.4);--card-accent:linear-gradient(135deg,#8B5CF6,#14D2AA);">
+        <div class="product-icon" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(20,210,170,0.1));color:#A78BFA;">
+          <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-title">FashionTech AI Suite</div>
+        <p class="product-desc">AR-powered virtual try-ons, AI design generation, seasonal trend forecasting, demand intelligence, and smart inventory optimization.</p>
+        <div class="product-tags">
+          <span class="tag">Virtual Try-On</span>
+          <span class="tag">Trend Forecast</span>
+          <span class="tag">AR Commerce</span>
+          <span class="tag">Design AI</span>
+        </div>
+      </div>
+
+      <!-- Enterprise AI -->
+      <div class="product-card reveal" style="--card-color:rgba(245,166,35,0.4);--card-accent:linear-gradient(135deg,#F5A623,#1A6FFF);">
+        <div class="product-icon" style="background:linear-gradient(135deg,rgba(245,166,35,0.2),rgba(26,111,255,0.1));color:#F5A623;">
+          <i class="fas fa-building-columns"></i>
+        </div>
+        <div class="product-title">Enterprise AI Suite</div>
+        <p class="product-desc">Custom GPT deployments, intelligent document processing, end-to-end workflow automation, knowledge-base AI, and enterprise-grade security.</p>
+        <div class="product-tags">
+          <span class="tag">Custom GPTs</span>
+          <span class="tag">Doc Intelligence</span>
+          <span class="tag">Workflow AI</span>
+          <span class="tag">SOC2</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="pricing" style="padding: 6rem 2rem;">
-    <div style="max-width: 1280px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Simple, Transparent Pricing</h2>
-            <p style="font-size: 1.125rem; color: var(--gray-600);">Choose the perfect plan for your business needs</p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <!-- Starter -->
-            <div class="card" style="text-align: center;">
-                <h3 style="margin-bottom: 0.5rem;">Starter</h3>
-                <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">
-                    ₹999 <span style="font-size: 1rem; font-weight: 400;">/month</span>
-                </div>
-                <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Perfect for small teams</p>
-                <div style="text-align: left; margin-bottom: 1.5rem;">
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Up to 5 users</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> 1 AI model integration</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Basic analytics</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-times" style="color: var(--gray-400); margin-right: 0.5rem;"></i> API access</p>
-                </div>
-                <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">Start Free Trial</a>
-            </div>
-            
-            <!-- Growth -->
-            <div class="card" style="border: 2px solid var(--primary); position: relative;">
-                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 100px; font-size: 0.75rem;">Most Popular</div>
-                <div style="text-align: center;">
-                    <h3 style="margin-bottom: 0.5rem;">Growth</h3>
-                    <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">
-                        ₹4,999 <span style="font-size: 1rem; font-weight: 400;">/month</span>
-                    </div>
-                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">For growing businesses</p>
-                    <div style="text-align: left; margin-bottom: 1.5rem;">
-                        <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Up to 25 users</p>
-                        <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> 5 AI model integrations</p>
-                        <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Advanced analytics</p>
-                        <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Full API access</p>
-                    </div>
-                    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Start Free Trial</a>
-                </div>
-            </div>
-            
-            <!-- Business -->
-            <div class="card" style="text-align: center;">
-                <h3 style="margin-bottom: 0.5rem;">Business</h3>
-                <div style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">
-                    ₹14,999 <span style="font-size: 1rem; font-weight: 400;">/month</span>
-                </div>
-                <p style="color: var(--gray-600); margin-bottom: 1.5rem;">For large enterprises</p>
-                <div style="text-align: left; margin-bottom: 1.5rem;">
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Unlimited users</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Unlimited AI models</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Custom analytics</p>
-                    <p style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Dedicated support</p>
-                </div>
-                <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">Contact Sales</a>
-            </div>
-        </div>
+<!-- FEATURES -->
+<section class="section" id="features" style="background:rgba(255,255,255,0.015);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="section-label">Platform Capabilities</div>
+      <h2 class="section-h2">Why Teams Choose<br><span class="g-text">MyndMesh</span></h2>
     </div>
+
+    <div class="feature-grid">
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(26,111,255,0.15);color:#4B93FF;"><i class="fas fa-brain"></i></div>
+        <div class="feature-title">Foundation Model Ready</div>
+        <p class="feature-text">Native integrations with OpenAI, Anthropic Claude, Gemini, and open-source LLMs. Switch models without touching your code.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(20,210,170,0.15);color:#14D2AA;"><i class="fas fa-shield-halved"></i></div>
+        <div class="feature-title">Enterprise Security</div>
+        <p class="feature-text">ISO 27001, SOC2 Type II, GDPR & PDPA compliant. AES-256 encryption, RBAC, SSO, and audit trails out of the box.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(245,166,35,0.15);color:#F5A623;"><i class="fas fa-chart-line"></i></div>
+        <div class="feature-title">Real-Time Analytics</div>
+        <p class="feature-text">Custom dashboards, cohort analysis, funnel tracking, and AI-generated insights — all live, all actionable.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(139,92,246,0.15);color:#A78BFA;"><i class="fas fa-plug"></i></div>
+        <div class="feature-title">50+ Integrations</div>
+        <p class="feature-text">Connect Slack, WhatsApp, Salesforce, HubSpot, Zapier, and more with one-click OAuth — zero engineering effort.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(20,210,170,0.15);color:#14D2AA;"><i class="fas fa-bolt"></i></div>
+        <div class="feature-title">Sub-50ms Latency</div>
+        <p class="feature-text">Edge-optimized infrastructure with 99.9% uptime SLA. Global CDN with intelligent routing for blazing-fast responses.</p>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon" style="background:rgba(26,111,255,0.15);color:#4B93FF;"><i class="fas fa-code-branch"></i></div>
+        <div class="feature-title">Developer-First API</div>
+        <p class="feature-text">RESTful and GraphQL APIs, SDKs for Node, Python, and Go, webhook support, and comprehensive OpenAPI documentation.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Leadership Section -->
-<section id="about" style="padding: 6rem 2rem; background: var(--gray-100);">
-    <div style="max-width: 1280px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Leadership Team</h2>
-            <p style="font-size: 1.125rem; color: var(--gray-600);">Visionaries building India's leading AI SaaS ecosystem</p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-            <!-- Founder -->
-            <div class="card">
-                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #3B82F6, #06D6A0); border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <i class="fas fa-user-tie" style="font-size: 4rem; color: white;"></i>
-                </div>
-                <h3 style="text-align: center;">Nagaraj Patarlapati</h3>
-                <p style="text-align: center; color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Founder & CEO</p>
-                <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Entrepreneur, researcher, and technology strategist focused on building scalable AI-powered SaaS products.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="#" style="color: var(--gray-600); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" style="color: var(--gray-600); font-size: 1.25rem;"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            
-            <!-- Co-Founder -->
-            <div class="card">
-                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #06D6A0, #3B82F6); border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
-                    <i class="fas fa-user-circle" style="font-size: 4rem; color: white;"></i>
-                </div>
-                <h3 style="text-align: center;">Shirisha Boram</h3>
-                <p style="text-align: center; color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Co-Founder & COO</p>
-                <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Leads operations, customer success, strategic partnerships, and organizational growth initiatives.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="#" style="color: var(--gray-600); font-size: 1.25rem;"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" style="color: var(--gray-600); font-size: 1.25rem;"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Founder Message -->
-        <div style="margin-top: 4rem; background: var(--white); border-radius: var(--radius-lg); padding: 3rem; text-align: center; box-shadow: var(--shadow);">
-            <i class="fas fa-quote-left" style="font-size: 3rem; color: var(--accent); opacity: 0.5;"></i>
-            <p style="font-size: 1.25rem; font-style: italic; max-width: 800px; margin: 1rem auto;">"At MyndMesh, we believe artificial intelligence should not be limited to large enterprises. Our mission is to empower startups, educational institutions, healthcare providers, and businesses with intelligent tools that create measurable impact."</p>
-            <h4 style="margin-top: 1rem;">— Nagaraj Patarlapati</h4>
-            <p style="color: var(--gray-600);">Founder & CEO, MyndMesh</p>
-        </div>
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-h2">Simple,<br>Transparent Pricing</h2>
+      <p class="section-sub" style="margin:0 auto;">No hidden fees. Start free, scale as you grow. Annual plans save up to 30%.</p>
     </div>
+
+    <div class="pricing-grid">
+      <!-- Starter -->
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-price g-text">₹999<span>/mo</span></div>
+        <div class="pricing-billing">Billed monthly · ₹699/mo annual</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Up to 500 users</li>
+          <li><i class="fas fa-check"></i> 1 AI Suite of your choice</li>
+          <li><i class="fas fa-check"></i> 10,000 AI API calls/month</li>
+          <li><i class="fas fa-check"></i> Basic analytics dashboard</li>
+          <li><i class="fas fa-check"></i> Email support (48h SLA)</li>
+          <li><i class="fas fa-check"></i> 5 team members</li>
+        </ul>
+        <a href="#" class="btn btn-ghost pricing-btn" onclick="openModal()">Get Started Free</a>
+      </div>
+
+      <!-- Growth (Featured) -->
+      <div class="pricing-card featured reveal">
+        <div class="pricing-name">Growth</div>
+        <div class="pricing-price g-text">₹4,999<span>/mo</span></div>
+        <div class="pricing-billing">Billed monthly · ₹3,499/mo annual</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Up to 5,000 users</li>
+          <li><i class="fas fa-check"></i> All 4 AI Suites included</li>
+          <li><i class="fas fa-check"></i> 100,000 AI API calls/month</li>
+          <li><i class="fas fa-check"></i> Advanced analytics + exports</li>
+          <li><i class="fas fa-check"></i> Priority support (4h SLA)</li>
+          <li><i class="fas fa-check"></i> 25 team members</li>
+          <li><i class="fas fa-check"></i> Custom integrations</li>
+          <li><i class="fas fa-check"></i> Dedicated account manager</li>
+        </ul>
+        <a href="#" class="btn btn-primary pricing-btn" onclick="openModal()">Start 14-Day Trial</a>
+      </div>
+
+      <!-- Business -->
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Business</div>
+        <div class="pricing-price g-text">₹14,999<span>/mo</span></div>
+        <div class="pricing-billing">Billed monthly · Custom annual pricing</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Unlimited users</li>
+          <li><i class="fas fa-check"></i> All 4 AI Suites + custom builds</li>
+          <li><i class="fas fa-check"></i> Unlimited AI API calls</li>
+          <li><i class="fas fa-check"></i> White-label options</li>
+          <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+          <li><i class="fas fa-check"></i> Unlimited team members</li>
+          <li><i class="fas fa-check"></i> SOC2 + custom compliance</li>
+          <li><i class="fas fa-check"></i> On-premise deployment option</li>
+        </ul>
+        <a href="#" class="btn btn-teal pricing-btn" onclick="openModal()">Contact Sales</a>
+      </div>
+    </div>
+
+    <div class="trust-bar reveal">
+      <span class="trust-badge"><i class="fas fa-shield-alt"></i> ISO 27001</span>
+      <span class="trust-badge"><i class="fas fa-lock"></i> SOC2 Ready</span>
+      <span class="trust-badge"><i class="fas fa-globe"></i> GDPR Compliant</span>
+      <span class="trust-badge"><i class="fas fa-certificate"></i> DPIIT Recognised</span>
+      <span class="trust-badge"><i class="fas fa-award"></i> MSME Registered</span>
+      <span class="trust-badge"><i class="fas fa-credit-card"></i> No Credit Card to Start</span>
+    </div>
+  </div>
 </section>
 
-<!-- Testimonials Section -->
-<section style="padding: 6rem 2rem;">
-    <div style="max-width: 1280px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Trusted by Industry Leaders</h2>
-            <p style="font-size: 1.125rem; color: var(--gray-600);">What our customers say about us</p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div class="card">
-                <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: #F59E0B;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p style="margin-bottom: 1rem;">"MyndMesh transformed our educational platform. The AI-powered assessment tools increased student engagement by 200%."</p>
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="width: 40px; height: 40px; background: var(--primary); border-radius: 20px;"></div>
-                    <div>
-                        <div style="font-weight: 600;">Rahul Sharma</div>
-                        <div style="font-size: 0.875rem; color: var(--gray-600);">CEO, EdTech Startup</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: #F59E0B;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p style="margin-bottom: 1rem;">"The HealthTech AI suite reduced our diagnosis time by 60%. Patient outcomes have improved significantly."</p>
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="width: 40px; height: 40px; background: var(--accent); border-radius: 20px;"></div>
-                    <div>
-                        <div style="font-weight: 600;">Dr. Priya Mehta</div>
-                        <div style="font-size: 0.875rem; color: var(--gray-600);">Healthcare Director</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: #F59E0B;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p style="margin-bottom: 1rem;">"Enterprise AI automation saved us 1000+ hours annually. The ROI was achieved in just 3 months."</p>
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="width: 40px; height: 40px; background: #8B5CF6; border-radius: 20px;"></div>
-                    <div>
-                        <div style="font-weight: 600;">Amit Kumar</div>
-                        <div style="font-size: 0.875rem; color: var(--gray-600);">CTO, Enterprise Corp</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- TESTIMONIALS -->
+<section class="section" style="background:rgba(255,255,255,0.015);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="section-label">Customer Stories</div>
+      <h2 class="section-h2">Trusted by<br>Industry Leaders</h2>
     </div>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i>
+        </div>
+        <p class="testi-text">"MyndMesh transformed our educational platform. The AI-powered assessment tools increased student engagement by 200% within the first quarter."</p>
+        <div class="testi-avatar">
+          <div class="testi-avatar-img" style="background:linear-gradient(135deg,#1A6FFF,#14D2AA);color:white;">RS</div>
+          <div>
+            <div class="testi-name">Rahul Sharma</div>
+            <div class="testi-role">CEO, EduNext India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i>
+        </div>
+        <p class="testi-text">"The HealthTech AI suite reduced our diagnosis-to-report time by 60%. Patient outcomes and satisfaction scores have improved significantly."</p>
+        <div class="testi-avatar">
+          <div class="testi-avatar-img" style="background:linear-gradient(135deg,#14D2AA,#1A6FFF);color:white;">PM</div>
+          <div>
+            <div class="testi-name">Dr. Priya Mehta</div>
+            <div class="testi-role">Director, Apex Healthcare</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i><i class="fas fa-star testi-star"></i>
+        </div>
+        <p class="testi-text">"Enterprise AI automation saved us 1,200+ hours annually. We achieved full ROI in under 3 months — phenomenal product and support team."</p>
+        <div class="testi-avatar">
+          <div class="testi-avatar-img" style="background:linear-gradient(135deg,#F5A623,#8B5CF6);color:white;">AK</div>
+          <div>
+            <div class="testi-name">Amit Kumar</div>
+            <div class="testi-role">CTO, Nexus Enterprises</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Trust Badges -->
-<section style="padding: 3rem 2rem; background: var(--gray-100);">
-    <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gray-600); margin-bottom: 2rem;">Security & Compliance</p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-            <span style="background: white; padding: 0.5rem 1rem; border-radius: 8px;"><i class="fas fa-shield-alt"></i> ISO 27001</span>
-            <span style="background: white; padding: 0.5rem 1rem; border-radius: 8px;"><i class="fas fa-lock"></i> SOC2 Ready</span>
-            <span style="background: white; padding: 0.5rem 1rem; border-radius: 8px;"><i class="fas fa-globe"></i> GDPR Compliant</span>
-            <span style="background: white; padding: 0.5rem 1rem; border-radius: 8px;"><i class="fas fa-chart-line"></i> Startup India</span>
-            <span style="background: white; padding: 0.5rem 1rem; border-radius: 8px;"><i class="fas fa-certificate"></i> MSME Registered</span>
-        </div>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-h2">Built by Builders,<br>for Builders</h2>
+      <p class="section-sub" style="margin:0 auto;">We're an AI-first startup on a mission to democratize intelligent software — from tier-1 cities to tier-3 India.</p>
     </div>
+
+    <div class="founders-grid">
+      <div class="founder-card reveal">
+        <div class="founder-avatar">NP</div>
+        <div class="founder-name">Nagaraj Patarlapati</div>
+        <div class="founder-role">Founder & CEO</div>
+        <p class="founder-bio">Leads product vision, AI strategy, and technology roadmap. Passionate about making enterprise AI accessible to every organization.</p>
+        <div class="founder-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="founder-card reveal">
+        <div class="founder-avatar" style="background:linear-gradient(135deg,#14D2AA,#1A6FFF);">SB</div>
+        <div class="founder-name">Shirisha Boram</div>
+        <div class="founder-role">Co-Founder & COO</div>
+        <p class="founder-bio">Drives operations, customer success, and strategic partnerships. Ensures every customer achieves measurable ROI with MyndMesh.</p>
+        <div class="founder-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-quote reveal">
+      <p class="founder-quote-text">"At MyndMesh, we believe artificial intelligence should not be limited to large enterprises. Our mission is to empower startups, educational institutions, healthcare providers, and businesses across India and beyond with intelligent tools that create real, measurable impact."</p>
+      <div class="founder-quote-attr">— <strong>Nagaraj Patarlapati</strong>, Founder & CEO, MyndMesh</div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA Section -->
-<section style="padding: 6rem 2rem; background: var(--gradient-dark); color: white;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Transform Your Industry with AI?</h2>
-        <p style="font-size: 1.125rem; margin-bottom: 2rem;">Join 500+ forward-thinking organizations already leveraging MyndMesh AI solutions.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center;">
-            <a href="#" class="btn btn-primary" style="background: white; color: var(--dark);">Get Started →</a>
-            <a href="#" class="btn btn-outline" style="border-color: white; color: white;">Contact Sales</a>
-        </div>
+<!-- FAQ -->
+<section class="section" style="background:rgba(255,255,255,0.015);border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-h2">Common Questions</h2>
     </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span class="faq-q-text">What is MyndMesh and who is it for?</span>
+          <div class="faq-icon"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">MyndMesh is an AI-first SaaS platform building intelligent products across EdTech, HealthTech, FashionTech, and Enterprise AI. It's for startups, SMEs, and large enterprises that want to integrate AI without building from scratch.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span class="faq-q-text">How does the 14-day free trial work?</span>
+          <div class="faq-icon"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Sign up with your email — no credit card required. You get full access to all features in your chosen plan for 14 days. At the end of the trial, you choose a paid plan or your account pauses (your data is retained for 30 days).</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span class="faq-q-text">What AI models does MyndMesh support?</span>
+          <div class="faq-icon"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">We integrate natively with OpenAI GPT-4, Anthropic Claude, Google Gemini, Meta Llama, and Mistral. You can switch models per use-case from a single dashboard with zero code changes.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span class="faq-q-text">Is my data secure and who owns it?</span>
+          <div class="faq-icon"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Your data is always yours. We are ISO 27001 certified, SOC2 Type II ready, and GDPR + India PDPA compliant. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We never train our models on your data without explicit consent.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span class="faq-q-text">Can I get a custom enterprise plan?</span>
+          <div class="faq-icon"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. We offer tailored pricing for large organizations, white-label deployments, on-premise installations, and custom AI model fine-tuning. Contact our sales team or book a discovery call to discuss your requirements.</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Integrations Section -->
-<section style="padding: 6rem 2rem;">
-    <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Integrations</h2>
-        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 3rem;">Connect with your favorite tools</p>
-        
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-openai"></i> OpenAI</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fas fa-brain"></i> Anthropic</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-google"></i> Google</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-slack"></i> Slack</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-whatsapp"></i> WhatsApp</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-microsoft"></i> Microsoft</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fab fa-salesforce"></i> Salesforce</div>
-            <div style="background: var(--gray-100); padding: 1rem 1.5rem; border-radius: var(--radius);"><i class="fas fa-bolt"></i> Zapier</div>
-        </div>
+<!-- INTEGRATIONS -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="section-label">Integrations</div>
+      <h2 class="section-h2">Connects with<br>Your Stack</h2>
+      <p class="section-sub" style="margin:0 auto;">50+ native integrations. If it has an API, MyndMesh can talk to it.</p>
     </div>
+
+    <div class="integrations-row reveal">
+      <div class="integration-chip"><i class="fas fa-brain"></i> OpenAI</div>
+      <div class="integration-chip"><i class="fas fa-robot"></i> Anthropic</div>
+      <div class="integration-chip"><i class="fab fa-google"></i> Google</div>
+      <div class="integration-chip"><i class="fab fa-slack"></i> Slack</div>
+      <div class="integration-chip"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+      <div class="integration-chip"><i class="fab fa-microsoft"></i> Microsoft 365</div>
+      <div class="integration-chip"><i class="fab fa-salesforce"></i> Salesforce</div>
+      <div class="integration-chip"><i class="fas fa-bolt"></i> Zapier</div>
+      <div class="integration-chip"><i class="fab fa-aws"></i> AWS</div>
+      <div class="integration-chip"><i class="fab fa-github"></i> GitHub</div>
+      <div class="integration-chip"><i class="fas fa-database"></i> HubSpot</div>
+      <div class="integration-chip"><i class="fab fa-stripe"></i> Stripe</div>
+      <div class="integration-chip"><i class="fas fa-envelope"></i> SendGrid</div>
+      <div class="integration-chip"><i class="fas fa-chart-bar"></i> PostHog</div>
+      <div class="integration-chip"><i class="fas fa-plus"></i> 36+ more</div>
+    </div>
+  </div>
 </section>
 
-<!-- FAQ Section -->
-<section style="padding: 6rem 2rem; background: var(--gray-100);">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
-        
-        <div class="card" style="margin-bottom: 1rem;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem;">What is MyndMesh?</div>
-            <p style="color: var(--gray-600);">MyndMesh is an AI-first SaaS company building intelligent digital products across EdTech, HealthTech, FashionTech, and Enterprise AI.</p>
+<!-- CTA BANNER -->
+<section style="padding:5rem 0;" id="contact">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div style="position:relative;z-index:2;">
+        <div class="section-label" style="margin-bottom:1.25rem;">Get Started Today</div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1rem;line-height:1.1;">Ready to Transform Your<br>Business with AI?</h2>
+        <p style="color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 2.5rem;font-weight:300;">Join 500+ forward-thinking organizations already leveraging MyndMesh. No credit card, no commitment — just results.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="#" class="btn btn-primary" onclick="openModal()" style="padding:1rem 2.25rem;">
+            <i class="fas fa-rocket"></i> Start Free Trial
+          </a>
+          <a href="#" class="btn btn-ghost" onclick="openModal()" style="padding:1rem 2.25rem;">
+            <i class="fas fa-calendar-alt"></i> Book a Demo
+          </a>
         </div>
-        
-        <div class="card" style="margin-bottom: 1rem;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem;">How does the free trial work?</div>
-            <p style="color: var(--gray-600);">14-day free trial with full access to all features. No credit card required.</p>
-        </div>
-        
-        <div class="card" style="margin-bottom: 1rem;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem;">What integrations are supported?</div>
-            <p style="color: var(--gray-600);">We integrate with OpenAI, Anthropic, Google, Slack, WhatsApp, Salesforce, HubSpot, and 50+ other tools.</p>
-        </div>
-        
-        <div class="card" style="margin-bottom: 1rem;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem;">Is my data secure?</div>
-            <p style="color: var(--gray-600);">Yes, we're ISO 27001 certified, SOC2 ready, and GDPR compliant with enterprise-grade encryption.</p>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer style="background: var(--dark); color: var(--gray-400); padding: 4rem 2rem 2rem;">
-    <div style="max-width: 1280px; margin: 0 auto;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-            <div>
-                <div class="footer-logo">
-                    <div class="footer-logo-icon">
-                        <img src="Gemini_Generated_Image_oebdfyoebdfyoebd.png" alt="MyndMesh Logo" style="width: 40px; height: 40px; object-fit: contain;">
-                    </div>
-                    <span style="font-size: 1.25rem; font-weight: 700; color: white;">MyndMesh</span>
-                </div>
-                <p>AI-powered SaaS solutions for the future of learning, health & lifestyle.</p>
-                <p style="margin-top: 1rem; font-size: 0.875rem;">Founded by Nagaraj Patarlapati & Shirisha Boram</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 1rem;">Products</h4>
-                <p>EdTech AI</p>
-                <p>HealthTech AI</p>
-                <p>FashionTech AI</p>
-                <p>Enterprise AI</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 1rem;">Company</h4>
-                <p>About Us</p>
-                <p>Leadership</p>
-                <p>Careers</p>
-                <p>Press</p>
-                <p>Investors</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 1rem;">Resources</h4>
-                <p>Blog</p>
-                <p>Documentation</p>
-                <p>API Docs</p>
-                <p>Security</p>
-                <p>Status</p>
-            </div>
-            <div>
-                <h4 style="color: white; margin-bottom: 1rem;">Legal</h4>
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
-                <p>Data Protection</p>
-                <p>GDPR</p>
-            </div>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="nav-logo" style="display:inline-flex;">
+          <div class="nav-logo-mark">M</div>
+          <span class="nav-logo-name">MyndMesh</span>
+        </a>
+        <p class="footer-brand-desc">AI-powered SaaS solutions for education, healthcare, fashion, and enterprise. Built in India, for the world.<br><br>Founded by Nagaraj Patarlapati &amp; Shirisha Boram.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
-        
-        <div style="border-top: 1px solid var(--gray-800); padding-top: 2rem; text-align: center;">
-            <p>&copy; 2025 MyndMesh. All rights reserved. | AI-Powered SaaS Solutions by Nagaraj Patarlapati & Shirisha Boram</p>
-            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem;">
-                <a href="#" style="color: var(--gray-400);"><i class="fab fa-linkedin"></i></a>
-                <a href="#" style="color: var(--gray-400);"><i class="fab fa-twitter"></i></a>
-                <a href="#" style="color: var(--gray-400);"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="#">EdTech AI</a>
+        <a href="#">HealthTech AI</a>
+        <a href="#">FashionTech AI</a>
+        <a href="#">Enterprise AI</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#about">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Investors</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="#">Documentation</a>
+        <a href="#">API Reference</a>
+        <a href="#">Status Page</a>
+        <a href="#">Security</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Data Processing</a>
+        <a href="#">GDPR</a>
+        <a href="#">Cookie Policy</a>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>© 2025 MyndMesh Technologies Pvt. Ltd. All rights reserved.</p>
+      <p>Made with <span style="color:#FF5F6D;">♥</span> in India</p>
+    </div>
+  </div>
 </footer>
 
-<!-- AI Chat Assistant -->
-<div class="chat-widget">
-    <div class="chat-window" id="chatWindow">
-        <div style="background: var(--gradient-primary); padding: 1rem; color: white; display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-robot"></i>
-                <span style="font-weight: 600;">MyndMesh AI Assistant</span>
-            </div>
-            <button onclick="toggleChat()" style="background: none; border: none; color: white; cursor: pointer;">
-                <i class="fas fa-times"></i>
-            </button>
+<!-- CHAT FAB -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()">
+  <i class="fas fa-comment-dots" id="chatFabIcon"></i>
+  <span class="chat-unread" id="chatUnread">1</span>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-panel-head">
+    <div class="chat-panel-head-top">
+      <div class="chat-agent">
+        <div class="chat-agent-avatar"><i class="fas fa-robot"></i></div>
+        <div>
+          <div class="chat-agent-name">Maya · MyndMesh AI</div>
+          <div class="chat-agent-status">Online now</div>
         </div>
-        <div id="chatMessages" style="flex: 1; overflow-y: auto; padding: 1rem;">
-            <div style="display: flex; justify-content: flex-start; margin-bottom: 1rem;">
-                <div style="background: var(--gray-100); padding: 0.75rem; border-radius: 12px; max-width: 80%;">
-                    <i class="fas fa-robot" style="font-size: 0.75rem; margin-right: 0.5rem;"></i>
-                    Hi! I'm Maya, your AI assistant. How can I help you today?
-                </div>
-            </div>
-        </div>
-        <div style="padding: 1rem; border-top: 1px solid var(--gray-200); display: flex; gap: 0.5rem;">
-            <input type="text" id="chatInput" placeholder="Ask me anything..." style="flex: 1; padding: 0.5rem; border: 1px solid var(--gray-200); border-radius: 8px; outline: none;">
-            <button onclick="sendChatMessage()" style="background: var(--primary); border: none; color: white; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer;">
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </div>
+      </div>
+      <button class="chat-close-btn" onclick="toggleChat()"><i class="fas fa-times"></i></button>
     </div>
-    <button class="chat-button" onclick="toggleChat()">
-        <i class="fas fa-comment-dots" style="color: white; font-size: 1.5rem;"></i>
-    </button>
+    <div class="chat-quick-actions">
+      <button class="chat-quick-btn" onclick="quickSend('What are your pricing plans?')">💰 Pricing</button>
+      <button class="chat-quick-btn" onclick="quickSend('Book a demo')">📅 Book Demo</button>
+      <button class="chat-quick-btn" onclick="quickSend('What integrations do you support?')">🔌 Integrations</button>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg chat-msg-bot">
+      <div class="chat-bubble chat-bubble-bot">👋 Hi! I'm <strong>Maya</strong>, your MyndMesh AI guide. How can I help you today?</div>
+    </div>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything..." />
+    <button class="chat-send" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button>
+  </div>
 </div>
 
-<!-- Contact Form Modal -->
-<div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center;">
-    <div style="background: white; max-width: 500px; width: 90%; border-radius: var(--radius-lg); padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3>Contact Us</h3>
-            <button onclick="closeModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
-        </div>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid var(--gray-200); border-radius: 8px;">
-            <input type="email" placeholder="Email Address" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid var(--gray-200); border-radius: 8px;">
-            <input type="text" placeholder="Company" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid var(--gray-200); border-radius: 8px;">
-            <textarea placeholder="Message" rows="4" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid var(--gray-200); border-radius: 8px;"></textarea>
-            <button type="submit" style="width: 100%; background: var(--gradient-primary); color: white; padding: 0.75rem; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
-        </form>
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span class="modal-title">Get in Touch</span>
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
     </div>
+    <input class="modal-field" type="text" placeholder="Your Name *" />
+    <input class="modal-field" type="email" placeholder="Work Email *" />
+    <input class="modal-field" type="text" placeholder="Company / Organisation" />
+    <input class="modal-field" type="text" placeholder="Role (e.g. CTO, Founder)" />
+    <textarea class="modal-field" rows="3" placeholder="Tell us about your use case..."></textarea>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:0.9rem;" onclick="submitModal()">
+      <i class="fas fa-paper-plane"></i> Send Message
+    </button>
+    <p style="font-size:0.72rem;color:var(--muted);text-align:center;margin-top:1rem;">We reply within 4 hours on business days.</p>
+  </div>
 </div>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <script>
-    // Dashboard Chart
-    const ctx = document.getElementById('dashboardChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-            datasets: [
-                {
-                    label: 'Active Users',
-                    data: [1200, 1800, 2400, 3200, 4100, 5200],
-                    borderColor: '#3B82F6',
-                    backgroundColor: 'rgba(59,130,246,0.1)',
-                    fill: true,
-                    tension: 0.4
-                },
-                {
-                    label: 'AI Accuracy (%)',
-                    data: [88, 90, 92, 93.5, 94.2, 94.8],
-                    borderColor: '#06D6A0',
-                    backgroundColor: 'rgba(6,214,160,0.1)',
-                    fill: true,
-                    tension: 0.4
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                }
-            }
-        }
-    });
-
-    // Chat functionality
-    function toggleChat() {
-        const chatWindow = document.getElementById('chatWindow');
-        chatWindow.classList.toggle('active');
-    }
-
-    function sendChatMessage() {
-        const input = document.getElementById('chatInput');
-        const message = input.value.trim();
-        if (!message) return;
-        
-        const chatMessages = document.getElementById('chatMessages');
-        
-        // Add user message
-        const userDiv = document.createElement('div');
-        userDiv.style.display = 'flex';
-        userDiv.style.justifyContent = 'flex-end';
-        userDiv.style.marginBottom = '1rem';
-        userDiv.innerHTML = `<div style="background: var(--primary); color: white; padding: 0.75rem; border-radius: 12px; max-width: 80%;">${message}</div>`;
-        chatMessages.appendChild(userDiv);
-        
-        input.value = '';
-        
-        // Simulate AI response
-        setTimeout(() => {
-            const responses = {
-                'price': 'Our pricing plans start at ₹999/month for Starter, ₹4,999/month for Growth, and ₹14,999/month for Business. Would you like a custom quote?',
-                'demo': 'I can help you schedule a demo! Please share your email and preferred time.',
-                'trial': 'You can start a 14-day free trial with full access to all features. No credit card required!',
-                'feature': 'MyndMesh offers AI-powered solutions for EdTech, HealthTech, FashionTech, and Enterprise automation.',
-                'support': 'Our support team is available 24/7. You can email support@myndmesh.in for assistance.'
-            };
-            
-            let response = "Thanks for your question! I'd recommend checking our pricing page for detailed information, or would you like me to connect you with a sales representative?";
-            
-            const lowerMsg = message.toLowerCase();
-            if (lowerMsg.includes('price') || lowerMsg.includes('cost')) response = responses.price;
-            else if (lowerMsg.includes('demo')) response = responses.demo;
-            else if (lowerMsg.includes('trial')) response = responses.trial;
-            else if (lowerMsg.includes('feature')) response = responses.feature;
-            else if (lowerMsg.includes('support') || lowerMsg.includes('help')) response = responses.support;
-            
-            const botDiv = document.createElement('div');
-            botDiv.style.display = 'flex';
-            botDiv.style.justifyContent = 'flex-start';
-            botDiv.style.marginBottom = '1rem';
-            botDiv.innerHTML = `<div style="background: var(--gray-100); padding: 0.75rem; border-radius: 12px; max-width: 80%;"><i class="fas fa-robot" style="font-size: 0.75rem; margin-right: 0.5rem;"></i>${response}</div>`;
-            chatMessages.appendChild(botDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 500);
-        
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    
-    document.getElementById('chatInput')?.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') sendChatMessage();
-    });
-    
-    // Contact form
-    function openModal() {
-        document.getElementById('contactModal').style.display = 'flex';
-    }
-    
-    function closeModal() {
-        document.getElementById('contactModal').style.display = 'none';
-    }
-    
-    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you! Our team will contact you within 24 hours.');
-        closeModal();
-    });
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href && href !== '#' && href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    });
-    
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    document.querySelectorAll('.card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease-out';
-        observer.observe(card);
-    });
-    
-    // Scroll to top button
-    const scrollButton = document.createElement('button');
-    scrollButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollButton.style.position = 'fixed';
-    scrollButton.style.bottom = '1.5rem';
-    scrollButton.style.left = '1.5rem';
-    scrollButton.style.width = '48px';
-    scrollButton.style.height = '48px';
-    scrollButton.style.borderRadius = '24px';
-    scrollButton.style.background = 'var(--gradient-primary)';
-    scrollButton.style.color = 'white';
-    scrollButton.style.border = 'none';
-    scrollButton.style.cursor = 'pointer';
-    scrollButton.style.display = 'none';
-    scrollButton.style.zIndex = '999';
-    document.body.appendChild(scrollButton);
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            scrollButton.style.display = 'flex';
-            scrollButton.style.alignItems = 'center';
-            scrollButton.style.justifyContent = 'center';
-        } else {
-            scrollButton.style.display = 'none';
-        }
-    });
-    
-    scrollButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Analytics tracking simulation
-    function trackEvent(category, action, label) {
-        console.log(`Analytics: ${category} - ${action} - ${label}`);
-        // In production, this would send to Google Analytics, PostHog, etc.
-    }
-    
-    // Track page view
-    trackEvent('Page', 'View', 'Homepage');
-    
-    // Track CTA clicks
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            trackEvent('CTA', 'Click', btn.innerText);
-        });
-    });
-</script>
-
-<!-- Schema.org JSON-LD -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MyndMesh",
-    "url": "https://myndmesh.in",
-    "logo": "https://myndmesh.in/logo.png",
-    "description": "AI-first SaaS company building intelligent digital products for EdTech, HealthTech, FashionTech and Enterprise AI.",
-    "founder": [
-        {
-            "@type": "Person",
-            "name": "Nagaraj Patarlapati",
-            "jobTitle": "Founder & CEO"
-        },
-        {
-            "@type": "Person",
-            "name": "Shirisha Boram",
-            "jobTitle": "Co-Founder & COO"
-        }
-    ],
-    "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "India"
+// ── CHART ──────────────────────────────────────
+const ctx = document.getElementById('heroChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+    datasets: [
+      {
+        label: 'Active Users',
+        data: [1200,1800,2400,3200,4100,5240],
+        borderColor: '#1A6FFF', backgroundColor: 'rgba(26,111,255,0.12)',
+        fill: true, tension: 0.45, borderWidth: 2,
+        pointBackgroundColor: '#1A6FFF', pointRadius: 4
+      },
+      {
+        label: 'AI Accuracy (%)',
+        data: [88,90,92,93.5,94.2,94.8],
+        borderColor: '#14D2AA', backgroundColor: 'rgba(20,210,170,0.08)',
+        fill: true, tension: 0.45, borderWidth: 2,
+        pointBackgroundColor: '#14D2AA', pointRadius: 4
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { labels: { color: 'rgba(255,255,255,0.55)', font: { size: 11 }, boxWidth: 12 } }
     },
-    "sameAs": [
-        "https://www.linkedin.com/company/myndmesh",
-        "https://twitter.com/myndmesh"
-    ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "MyndMesh AI Suite",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-        "@type": "Offer",
-        "price": "999",
-        "priceCurrency": "INR"
+    scales: {
+      x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 11 } } },
+      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 11 } } }
     }
+  }
+});
+
+// ── HEADER SCROLL ──────────────────────────────
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 60);
+  const scrollBtn = document.getElementById('scrollTop');
+  scrollBtn.classList.toggle('visible', window.scrollY > 500);
+});
+
+// ── REVEAL OBSERVER ────────────────────────────
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// ── CARD MOUSE GLOW ────────────────────────────
+document.querySelectorAll('.card, .product-card, .feature-item').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+});
+
+// ── MOBILE NAV ─────────────────────────────────
+function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+// ── SMOOTH SCROLL ──────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// ── FAQ ────────────────────────────────────────
+function toggleFAQ(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').style.maxHeight = null;
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    const ans = item.querySelector('.faq-a');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+  }
 }
+
+// ── MODAL ──────────────────────────────────────
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+function submitModal() {
+  alert('✅ Message sent! Our team will reply within 4 hours.');
+  closeModal();
+}
+
+// ── CHAT ──────────────────────────────────────
+let chatOpen = false;
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('chatPanel').classList.toggle('open', chatOpen);
+  document.getElementById('chatFabIcon').className = chatOpen ? 'fas fa-times' : 'fas fa-comment-dots';
+  document.getElementById('chatUnread').style.display = chatOpen ? 'none' : 'none';
+}
+
+function quickSend(msg) {
+  document.getElementById('chatInput').value = msg;
+  sendChat();
+}
+
+const chatResponses = {
+  price: '💰 Our plans start at ₹999/mo (Starter), ₹4,999/mo (Growth), and ₹14,999/mo (Business). Annual billing saves you up to 30%. Would you like a custom enterprise quote?',
+  demo: '📅 I can help schedule a demo! Our team usually runs 30-minute sessions. Drop your email at contact@myndmesh.in or click the Contact Sales button above.',
+  trial: '🎉 You get a full 14-day trial with complete access — no credit card needed. Click "Start Free Trial" to begin in under 60 seconds!',
+  feature: '🧠 MyndMesh covers EdTech, HealthTech, FashionTech and Enterprise AI. Each suite is production-ready with 50+ integrations and sub-50ms latency.',
+  integration: '🔌 We support OpenAI, Anthropic, Google, Slack, WhatsApp, Salesforce, HubSpot, Zapier, AWS, Stripe, and 40+ more — all no-code to connect.',
+  security: '🔒 We are ISO 27001 certified, SOC2 Type II ready, GDPR & India PDPA compliant. AES-256 encryption, RBAC, SSO, and full audit trails are included.',
+  default: "Great question! Our team at MyndMesh would love to help. You can reach us at contact@myndmesh.in or click 'Contact Sales' for a personalised response."
+};
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  appendMsg(msg, 'user');
+  input.value = '';
+  showTyping();
+
+  setTimeout(() => {
+    removeTyping();
+    const lm = msg.toLowerCase();
+    let resp = chatResponses.default;
+    if (lm.includes('price') || lm.includes('cost') || lm.includes('plan')) resp = chatResponses.price;
+    else if (lm.includes('demo')) resp = chatResponses.demo;
+    else if (lm.includes('trial') || lm.includes('free')) resp = chatResponses.trial;
+    else if (lm.includes('feature') || lm.includes('what') || lm.includes('product')) resp = chatResponses.feature;
+    else if (lm.includes('integrat') || lm.includes('connect') || lm.includes('slack') || lm.includes('api')) resp = chatResponses.integration;
+    else if (lm.includes('secur') || lm.includes('gdpr') || lm.includes('data') || lm.includes('compli')) resp = chatResponses.security;
+    appendMsg(resp, 'bot');
+  }, 1000 + Math.random() * 500);
+}
+
+function appendMsg(text, type) {
+  const messages = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `chat-msg chat-msg-${type}`;
+  div.innerHTML = `<div class="chat-bubble chat-bubble-${type}">${text}</div>`;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+let typingEl = null;
+function showTyping() {
+  const messages = document.getElementById('chatMessages');
+  typingEl = document.createElement('div');
+  typingEl.className = 'chat-msg chat-msg-bot';
+  typingEl.innerHTML = `<div class="chat-bubble chat-bubble-bot"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  messages.appendChild(typingEl);
+  messages.scrollTop = messages.scrollHeight;
+}
+function removeTyping() { if (typingEl) { typingEl.remove(); typingEl = null; } }
+
+document.getElementById('chatInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendChat();
+});
 </script>
 
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is MyndMesh?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "MyndMesh is an AI-first SaaS company building intelligent digital products across EdTech, HealthTech, FashionTech, and Enterprise AI."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How does the free trial work?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "14-day free trial with full access to all features. No credit card required."
-            }
-        }
-    ]
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MyndMesh",
+  "url": "https://myndmesh.in",
+  "description": "AI-first SaaS company building intelligent digital products for EdTech, HealthTech, FashionTech and Enterprise AI.",
+  "founder": [
+    { "@type": "Person", "name": "Nagaraj Patarlapati", "jobTitle": "Founder & CEO" },
+    { "@type": "Person", "name": "Shirisha Boram", "jobTitle": "Co-Founder & COO" }
+  ],
+  "address": { "@type": "PostalAddress", "addressCountry": "India" },
+  "sameAs": ["https://www.linkedin.com/company/myndmesh", "https://twitter.com/myndmesh"]
 }
 </script>
-
 </body>
 </html>
